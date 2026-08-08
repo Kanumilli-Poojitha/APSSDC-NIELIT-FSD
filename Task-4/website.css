@@ -1,0 +1,623 @@
+/* ================= GENERAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: white;
+    color: #222;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    height: 75px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 8%;
+
+    background-color: white;
+}
+
+.logo {
+    font-size: 30px;
+    color: #ff5b00;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 40px;
+}
+
+.navbar nav a {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.navbar nav a:hover {
+    color: #ff5b00;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 600px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 60px 7% 40px;
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+
+/* ================= HERO CONTENT ================= */
+
+.hero-content {
+    width: 52%;
+
+    z-index: 5;
+}
+
+.small-heading {
+    color: #555;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 48px;
+
+    line-height: 1.08;
+
+    max-width: 650px;
+
+    margin-bottom: 25px;
+}
+
+.hero-text {
+    color: #777;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    max-width: 540px;
+
+    margin-bottom: 30px;
+}
+
+
+/* ================= BUTTON ================= */
+
+.btn {
+    display: inline-block;
+
+    padding: 13px 28px;
+
+    background: #ff5b00;
+    color: white;
+
+    border-radius: 30px;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #222;
+
+    transform: translateY(-3px);
+}
+
+
+/* ================= HERO IMAGE ================= */
+
+.hero-image {
+    width: 48%;
+    height: 540px;
+
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: flex-end;
+}
+
+
+/* ORANGE SHAPE */
+
+.orange-shape {
+    position: absolute;
+
+    width: 570px;
+    height: 380px;
+
+    background: #ff5b00;
+
+    transform: rotate(-30deg);
+
+    right: -80px;
+    top: 100px;
+
+    z-index: 1;
+}
+
+
+/* PERSON IMAGE */
+
+.hero-image img {
+    position: relative;
+
+    width: 500px;
+    height: 540px;
+
+    object-fit: cover;
+
+    object-position: 75% center;
+
+    z-index: 2;
+}
+
+
+/* ================= SUCCESS SECTION ================= */
+
+.success-section {
+    background: #f6dce0;
+
+    padding: 55px 8%;
+}
+
+.year-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.year-card {
+    background: white;
+
+    min-height: 135px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 25px;
+
+    transition: 0.3s;
+}
+
+.year-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.year-card h2 {
+    color: #ff5b00;
+
+    font-size: 28px;
+
+    margin-bottom: 12px;
+}
+
+.year-card p {
+    color: #777;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+
+/* ================= ABOUT SECTION ================= */
+
+.about-section {
+    padding: 90px 8%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.about-text {
+    max-width: 550px;
+}
+
+.orange-title {
+    font-size: 18px;
+
+    font-weight: bold;
+
+    line-height: 1.5;
+
+    margin-bottom: 20px;
+}
+
+.about-text > p:not(.orange-title) {
+    color: #777;
+
+    line-height: 1.7;
+
+    margin-bottom: 20px;
+}
+
+.about-text ul {
+    margin-left: 18px;
+
+    margin-bottom: 25px;
+}
+
+.about-text li {
+    margin-bottom: 10px;
+
+    font-size: 14px;
+}
+
+
+/* ABOUT ORANGE BOX */
+
+.about-box {
+    background: #ff5b00;
+
+    color: white;
+
+    min-height: 280px;
+
+    padding: 50px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.about-box h3 {
+    font-size: 30px;
+
+    line-height: 1.2;
+
+    margin-bottom: 20px;
+}
+
+.about-box p {
+    line-height: 1.7;
+}
+
+
+/* ================= IMAGE SECTION ================= */
+
+.image-section {
+    padding: 0 8% 80px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px;
+}
+
+.image-card {
+    height: 330px;
+
+    overflow: hidden;
+}
+
+.image-card img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.5s;
+}
+
+.image-card:hover img {
+    transform: scale(1.05);
+}
+
+
+/* ================= INFORMATION SECTION ================= */
+
+.info-section {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    min-height: 430px;
+}
+
+
+/* ORANGE CONTENT */
+
+.info-content {
+    background: #ff5b00;
+
+    color: white;
+
+    padding: 70px 10%;
+}
+
+.info-content h2 {
+    font-size: 25px;
+
+    line-height: 1.4;
+
+    margin-bottom: 25px;
+}
+
+.info-content p {
+    line-height: 1.7;
+
+    margin-bottom: 30px;
+}
+
+
+/* WHITE BUTTON */
+
+.white-btn {
+    display: inline-block;
+
+    padding: 12px 25px;
+
+    background: white;
+
+    color: #ff5b00;
+
+    border-radius: 25px;
+
+    font-size: 11px;
+
+    font-weight: bold;
+}
+
+
+/* ================= TESTIMONIALS ================= */
+
+.testimonials {
+    background: #f6dce0;
+
+    padding: 50px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    gap: 25px;
+}
+
+.testimonial {
+    background: white;
+
+    padding: 25px 30px;
+
+    position: relative;
+}
+
+.quote {
+    color: #ff5b00;
+
+    font-size: 45px;
+
+    line-height: 20px;
+}
+
+.testimonial p {
+    color: #555;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    margin: 10px 0;
+}
+
+.testimonial h4 {
+    font-size: 11px;
+
+    letter-spacing: 1px;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #222;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 50px 20px;
+}
+
+.footer-logo {
+    font-size: 20px;
+
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+.footer-logo span {
+    color: #ff5b00;
+}
+
+footer > p {
+    color: #aaa;
+
+    font-size: 13px;
+
+    margin-bottom: 25px;
+}
+
+.footer-links {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    margin-bottom: 30px;
+}
+
+.footer-links a:hover {
+    color: #ff5b00;
+}
+
+footer .copyright {
+    font-size: 11px;
+
+    margin: 0;
+}
+
+
+/* ================= TABLET ================= */
+
+@media (max-width: 900px) {
+
+    .hero {
+        flex-direction: column;
+
+        padding: 60px 8%;
+    }
+
+    .hero-content {
+        width: 100%;
+
+        margin-bottom: 40px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero-image {
+        width: 100%;
+
+        height: 500px;
+    }
+
+    .hero-image img {
+        width: 400px;
+        height: 500px;
+    }
+
+    .year-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-section {
+        grid-template-columns: 1fr;
+    }
+
+    .info-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .navbar nav {
+        display: none;
+    }
+
+    .hero {
+        padding: 50px 5%;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero-image {
+        height: 420px;
+    }
+
+    .hero-image img {
+        width: 320px;
+        height: 420px;
+    }
+
+    .orange-shape {
+        width: 400px;
+        height: 300px;
+    }
+
+    .success-section {
+        padding: 40px 5%;
+    }
+
+    .year-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-section {
+        padding: 60px 5%;
+    }
+
+    .image-section {
+        padding: 0 5% 60px;
+
+        grid-template-columns: 1fr;
+    }
+
+    .info-content {
+        padding: 50px 8%;
+    }
+
+    .testimonials {
+        padding: 30px;
+    }
+
+}
