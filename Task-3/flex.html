@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Gallery</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 0;
+            padding: 30px;
+        }
+
+        h1{
+            margin-bottom: 30px;
+        }
+
+        .dogs{
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .dog{
+            text-align: center;
+        }
+
+        .dog img{
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 2px solid #333;
+        }
+
+        .dog p{
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>My Dog Gallery</h1>
+
+    <div class="dogs">
+
+        <div class="dog">
+            <img src="Dog-1.avif" alt="Golden Retriever">
+            <p>Golden Retriever</p>
+        </div>
+
+        <div class="dog">
+            <img src="Dog-2.avif" alt="Dog Image-1">
+            <p>Golden Retriever</p>
+        </div>
+
+        <div class="dog">
+            <img src="Dog-3.avif" alt="Dog Image-3">
+            <p>Bernese Mountain Dog</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
