@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration Form</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#74ebd5,#ACB6E5);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:20px;
+}
+
+.container{
+    background:#fff;
+    width:800px;
+    max-width:100%;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+
+h2{
+    text-align:center;
+    margin-bottom:20px;
+    color:#333;
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+.full{
+    grid-column:span 2;
+}
+
+label{
+    display:block;
+    margin-bottom:5px;
+    font-weight:bold;
+}
+
+input,select,textarea{
+    width:100%;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    outline:none;
+}
+
+input:focus,select:focus,textarea:focus{
+    border-color:#4CAF50;
+}
+
+.radio-group,
+.checkbox-group{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-top:5px;
+}
+
+.radio-group input,
+.checkbox-group input{
+    width:auto;
+}
+
+.buttons{
+    display:flex;
+    justify-content:space-between;
+    margin-top:20px;
+}
+
+button{
+    padding:12px 25px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    color:white;
+    font-size:16px;
+}
+
+.prev{
+    background:#6c757d;
+}
+
+.next{
+    background:#17a2b8;
+}
+
+.submit{
+    background:#28a745;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+#disabilityDetails{
+    display:none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h2>Registration Form</h2>
+
+<form>
+
+<div class="form-grid">
+
+<div>
+<label>First Name</label>
+<input type="text" placeholder="Enter first name">
+</div>
+
+<div>
+<label>Last Name</label>
+<input type="text" placeholder="Enter last name">
+</div>
+
+<div>
+<label>Email</label>
+<input type="email" placeholder="Enter email">
+</div>
+
+<div>
+<label>Password</label>
+<input type="password" placeholder="Enter password">
+</div>
+
+<div>
+<label>Phone Number</label>
+<input type="tel" placeholder="Enter phone number">
+</div>
+
+<div>
+<label>Date of Birth</label>
+<input type="date">
+</div>
+
+<div class="full">
+<label>Gender</label>
+<div class="radio-group">
+<input type="radio" name="gender"> Male
+<input type="radio" name="gender"> Female
+<input type="radio" name="gender"> Other
+</div>
+</div>
+
+<div class="full">
+<label>Disability</label>
+<div class="radio-group">
+<input type="radio" name="disability" onclick="showInput(true)"> Yes
+<input type="radio" name="disability" onclick="showInput(false)" checked> No
+</div>
+</div>
+
+<div class="full" id="disabilityDetails">
+<label>Please specify disability</label>
+<input type="text" placeholder="Enter disability details">
+</div>
+
+<div class="full">
+<label>Address</label>
+<textarea rows="3" placeholder="Enter address"></textarea>
+</div>
+
+<div>
+<label>Designation</label>
+<input type="text" placeholder="Enter designation">
+</div>
+
+<div>
+<label>State</label>
+<select>
+<option>Select State</option>
+<option>Andhra Pradesh</option>
+<option>Telangana</option>
+<option>Tamil Nadu</option>
+<option>Karnataka</option>
+<option>Kerala</option>
+<option>Maharashtra</option>
+<option>Other</option>
+</select>
+</div>
+
+<div>
+<label>Upload Resume</label>
+<input type="file">
+</div>
+
+<div>
+<label>Profile Picture</label>
+<input type="file" accept="image/*">
+</div>
+
+<div class="full checkbox-group">
+<input type="checkbox">
+<label>I agree to the Terms & Conditions</label>
+</div>
+
+</div>
+
+<div class="buttons">
+<button type="button" class="prev">Previous</button>
+<button type="button" class="next">Next</button>
+<button type="submit" class="submit">Submit</button>
+</div>
+
+</form>
+</div>
+
+<script>
+function showInput(show){
+    document.getElementById("disabilityDetails").style.display =
+    show ? "block" : "none";
+}
+</script>
+
+</body>
+</html>
