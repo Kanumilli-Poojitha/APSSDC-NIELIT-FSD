@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College CRUD Operations</title>
+  <link rel="stylesheet" href="college.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>College CRUD Operations</h1>
+      <p>Student Management System</p>
+    </header>
+
+    <main class="card">
+      <h2 id="formTitle">Add Student</h2>
+
+      <form id="studentForm">
+        <div class="form-grid">
+          <div class="field">
+            <label for="studentName">Student Name</label>
+            <input id="studentName" type="text" placeholder="Enter student name" required>
+          </div>
+
+          <div class="field">
+            <label for="rollNo">Roll Number</label>
+            <input id="rollNo" type="text" placeholder="Enter roll number" required>
+          </div>
+
+          <div class="field">
+            <label for="department">Department</label>
+            <input id="department" type="text" placeholder="e.g. AIML" required>
+          </div>
+        </div>
+
+        <div class="buttons">
+          <button type="submit" id="saveBtn" class="add-btn">Add</button>
+          <button type="button" id="updateBtn" class="update-btn" onclick="updateStudent()" disabled>Update</button>
+          <button type="button" class="cancel-btn" onclick="resetForm()">Cancel</button>
+        </div>
+      </form>
+
+      <section class="list-section">
+        <div class="list-heading">
+          <h2>Student List</h2>
+          <span id="count">0 Students</span>
+        </div>
+
+        <div id="studentList"></div>
+        <p id="emptyMessage" class="empty">No students added yet.</p>
+      </section>
+    </main>
+  </div>
+
+  <script src="college.js"></script>
+</body>
+</html>
