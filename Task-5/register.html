@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register & Login</title>
+
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+
+    <h1>Register & Login</h1>
+
+    <div class="container">
+
+        <!-- Register Form -->
+        <div class="box">
+            <h2>Register</h2>
+
+            <form id="personalDetails">
+
+                <label for="firstname">First Name</label>
+                <input type="text" id="firstname" required>
+
+                <label for="lastname">Last Name</label>
+                <input type="text" id="lastname" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" required>
+
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" required>
+
+                <input type="submit" value="Register">
+
+            </form>
+
+            <div id="registerOutput"></div>
+        </div>
+
+        <!-- Login Form -->
+        <div class="box">
+            <h2>Login</h2>
+
+            <form id="loginForm">
+
+                <label for="loginEmail">Email</label>
+                <input type="email" id="loginEmail" required>
+
+                <label for="loginPassword">Password</label>
+                <input type="password" id="loginPassword" required>
+
+                <input type="submit" value="Login">
+
+            </form>
+
+            <div id="loginOutput"></div>
+        </div>
+
+    </div>
+
+    <script src="register.js"></script>
+
+</body>
+</html>
